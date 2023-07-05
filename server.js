@@ -863,10 +863,9 @@ server.delete(`/sponsors/:id`,async (req,res)=>{
 async function start() {
   try {
     await connectDatabase();
-    server.listen();
-    // server.listen(PORT, function () {
-    //   console.log(`SERVER STARTED AT PORT : ${PORT}`);
-    // });
+    server.listen(PORT, function () {
+      console.log(`SERVER STARTED AT PORT : ${PORT}`);
+    });
   } catch (err) {
     console.log(err);
   }
